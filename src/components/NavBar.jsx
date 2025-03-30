@@ -55,7 +55,7 @@ const navigate=useNavigate();
           </Link>
         </li>
         <li><Link to="/settings">Settings</Link></li>
-        <li><Link  onClick={handleLogout}>Logout</Link></li>
+        <li><Link  onClick={(handleLogout)}>Logout</Link></li>
       </ul>
     </div>
     </div>}
