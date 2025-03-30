@@ -14,9 +14,9 @@ const navigate=useNavigate();
   const handleLogout=async()=>{
   try  
   {
-   const res= await axios.post(BASE_URL + "/logout")
-    dispatch(removeUser(res.data))
-    navigate("/login")
+   const res= await axios.post(BASE_URL + "/logout",{},{withCredentials:true})
+    dispatch(removeUser())
+    return navigate("/login")
   }
   catch(error){
     console.log(error)
