@@ -27,7 +27,7 @@ const navigate=useNavigate();
    
         <div className="navbar bg-base-300 shadow-sm">
   <div className="flex-1">
-    <Link to="/" className="btn btn-ghost text-xl"> 🧑‍💻DevTinder</Link>
+    <Link to="/feed" className="btn btn-ghost text-xl"> 🧑‍💻DevTinder</Link>
   </div>
   <div className="flex gap-2">
  
