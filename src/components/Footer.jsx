@@ -3,9 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     
-      <footer className=" h-35 footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 fixed bottom-0 ">
+      <footer className=" h-12 footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10 fixed bottom-0 ">
 
-  <nav>
+  {/* <nav>
     <div className="grid grid-flow-col gap-4">
       <a>
         <svg
@@ -41,7 +41,7 @@ const Footer = () => {
         </svg>
       </a>
     </div>
-  </nav>
+  </nav> */}
   <aside>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by DevTinder Ltd</p>
   </aside>

@@ -39,10 +39,10 @@ const navigate=useNavigate();
         <div className="w-10 rounded-full">
           <img
             alt="User"
-            // src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-            // src={user.photoURL}
-            src='https://media.licdn.com/dms/image/v2/D5635AQFQxs3yKcj2iQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1732344766399?e=1743760800&v=beta&t=KPmDPS-HRXseEWcmXDro67gsmkeBhzdEXMqlDSuozxk'
-             />
+            
+            src={user.photoURL}
+
+            ></img>
         </div>
       </div>
       <ul
@@ -55,7 +55,7 @@ const navigate=useNavigate();
           </Link>
         </li>
         <li><Link to="/settings">Settings</Link></li>
-        <li><Link  onClick={(handleLogout)}>Logout</Link></li>
+        <li><Link  onClick={handleLogout}>Logout</Link></li>
       </ul>
     </div>
     </div>}
