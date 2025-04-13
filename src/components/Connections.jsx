@@ -8,7 +8,7 @@ const Connections = () => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const connection = useSelector((store) => store.connection);
-  console.log("lalalla", connection);
+
 
   const getConnections = async () => {
     try {
@@ -38,7 +38,7 @@ const Connections = () => {
         </p>
 
         {connection.map((c) => (
-          <ul className="list  bg-base-200 rounded-box shadow-md w-1/2 my-2">
+          <ul key={c._id} className="list  bg-base-200 rounded-box shadow-md w-1/2 my-2">
             <li className="list-row">
               <div>
                 <img className="size-10 rounded-box" src={c.photoURL} />
