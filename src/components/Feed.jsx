@@ -20,6 +20,7 @@ const Feed = () => {
     // console.log(res)
     dispatch(addFeed(res.data.data))
   }
+  
   catch(err){
     setError(err?.response?.data || "Something Went Wrong")
     console.log(err)
