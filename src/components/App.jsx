@@ -8,6 +8,8 @@ import appStore from "../utils/appStore"
 import Feed from "./Feed"
 import Connections from "./Connections"
 import Request from "./Request"
+import Home from "./Home"
+import Chat from "./Chat"
 
 function App() {
 
@@ -16,12 +18,17 @@ function App() {
     <Provider store={appStore}>
     <BrowserRouter basename="/">
     <Routes>
+      
       <Route path="/" element= {<Body/>} >
+      <Route path="/login" element={<Login />} />
+      {/* <Route path="/signup" element={<Login />} /> */}
       <Route path="/feed" element= {<Feed/>} />
-      <Route path="/login" element= {<Login/>} />
       <Route path="/profile" element= {<Profile/>} />
       <Route path="/connections" element= {<Connections/>} />
       <Route path="/requests" element= {<Request/>} />
+      <Route path="/home" element= {<Home/>} />
+      <Route path="/chat/:targetUserId" element={<Chat/>}/>
+      
     </Route>
     </Routes>
     </BrowserRouter>

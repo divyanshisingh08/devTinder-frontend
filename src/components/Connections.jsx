@@ -3,11 +3,16 @@ import { BASE_URL } from "../utils/constants";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnection } from "../utils/connectionSlice";
+import { LuSend } from "react-icons/lu";
+import { Link } from "react-router-dom";
+
 
 const Connections = () => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const connection = useSelector((store) => store.connection);
+
+ 
 
 
   const getConnections = async () => {
@@ -49,7 +54,15 @@ const Connections = () => {
                 <p className="list-col-wrap text-xs">{c.about}</p>
               </div>
 
-              <button className="btn btn-square btn-ghost">
+<div className="mt-8">
+   <Link to={"/chat/"+ c._id}>
+          <LuSend />
+          </Link>
+</div>
+
+         
+            
+              {/* <button className="btn btn-square btn-ghost">
                 <svg
                   className="size-[1.2em]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +78,7 @@ const Connections = () => {
                     <path d="M6 3L20 12 6 21 6 3z"></path>
                   </g>
                 </svg>
-              </button>
+              </button> */}
             </li>
           </ul>
         ))}
